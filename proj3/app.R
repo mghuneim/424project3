@@ -163,7 +163,8 @@ ui <- dashboardPage(
                     h2("Created by: Matthew Ghuneim"),
                     h3("This was the third project for CS 424 Spring 2021. 
                        I downloaded the data file from the City of Chicago website and loaded it in to R.
-                       The code available to run this is located here: https://github.com/mghuneim/424project3")
+                       The code available to run this is located here: https://github.com/mghuneim/424project3. 
+                       The original data file is located here:  https://data.cityofchicago.org/Environment-Sustainable-Development/Energy-Usage-2010/8yq3-m6wp")
             )
         )
     )
@@ -392,13 +393,13 @@ server <- function(input, output) {
             kwh <- data.frame(colSums(data2[, 5:16], na.rm = TRUE))
             colnames(kwh)[1] <- c("Totals")
             kwh$month <- chartMonths
-            datatable(kwh, rownames = FALSE)
+            datatable(kwh, options = list(pageLength = 2), rownames = FALSE)
         }
         else if ('TOTAL.THERMS' %in% input$Source2){
             therm <- data.frame(colSums(data2[, 20:31], na.rm = TRUE))
             colnames(therm)[1] <- c("Totals")
             therm$month <- chartMonths
-            datatable(therm, rownames = FALSE)
+            datatable(therm, options = list(pageLength = 2), rownames = FALSE)
         }
     })
     output$tab3 <- renderDataTable({
@@ -407,13 +408,13 @@ server <- function(input, output) {
             kwh <- data.frame(colSums(data2[, 5:16], na.rm = TRUE))
             colnames(kwh)[1] <- c("Totals")
             kwh$month <- chartMonths
-            datatable(kwh, rownames = FALSE)
+            datatable(kwh, options = list(pageLength = 2), rownames = FALSE)
         }
         else if ('TOTAL.THERMS' %in% input$Source3){
             therm <- data.frame(colSums(data2[, 20:31], na.rm = TRUE))
             colnames(therm)[1] <- c("Totals")
             therm$month <- chartMonths
-            datatable(therm, rownames = FALSE)
+            datatable(therm, options = list(pageLength = 2), rownames = FALSE)
         }
     })
 
