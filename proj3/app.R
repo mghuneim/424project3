@@ -76,7 +76,7 @@ ui <- dashboardPage(
     ),
     dashboardBody(
         tabItems(
-            # Near West Side Leaflet map
+            # Near West Side Leaflet map, graph, and table
             tabItem(tabName = "west",
                     fluidRow(
                         column(6,
@@ -99,7 +99,7 @@ ui <- dashboardPage(
                         )
                     )
             ),
-            # different neighborhood comparisons and different graphs
+            # different neighborhood comparisons and different graphs/tables
             tabItem(tabName = "states",
                     fluidRow(
                         column(6,
@@ -120,6 +120,7 @@ ui <- dashboardPage(
                         ),
                     )
             ),
+            # charts for part 2 since i did not have enough room on the previous page
             tabItem(tabName = "charts",
                     fluidRow(
                         column(6,
@@ -144,6 +145,7 @@ ui <- dashboardPage(
                         )
                     )
             ),
+            # chicago map
             tabItem(tabName = "chi",
                     fluidRow(
                         column(8,
