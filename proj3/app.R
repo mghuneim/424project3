@@ -88,7 +88,7 @@ ui <- dashboardPage(
                                selectInput("Month", "Select a month to visualize", months, selected = 'All')
                         ),
                         column(6,
-                               box(title = "Line Graphs of Near West Side", solidHeader = TRUE,
+                               box(title = "Bar Graph of Near West Side", solidHeader = TRUE,
                                    status = "primary", width = 12,
                                    plotOutput("plot1")
                                ),
@@ -123,7 +123,7 @@ ui <- dashboardPage(
             tabItem(tabName = "charts",
                     fluidRow(
                         column(6,
-                               box(title = "Line Graph 1", solidHeader = TRUE,
+                               box(title = "Bar Graph 1", solidHeader = TRUE,
                                    status = "primary", width = 12,
                                    plotOutput("plot2")
                                ),
@@ -133,7 +133,7 @@ ui <- dashboardPage(
                                )
                         ),
                         column(6,
-                               box(title = "Line Graph 2", solidHeader = TRUE,
+                               box(title = "Bar Graph 2", solidHeader = TRUE,
                                    status = "primary", width = 12,
                                    plotOutput("plot3")
                                ),
